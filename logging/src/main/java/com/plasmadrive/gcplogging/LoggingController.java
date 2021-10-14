@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LoggingController {
+public class
+
+LoggingController {
 
     Logger logger = LoggerFactory.getLogger(LoggingController.class);
     @RequestMapping("/hello")
@@ -26,5 +28,10 @@ public class LoggingController {
     public String throwError() throws Exception {
         throw new Exception("Ouch");
 
+    }
+
+    @RequestMapping("/")
+    public String index() {
+        return "Home";
     }
 }
